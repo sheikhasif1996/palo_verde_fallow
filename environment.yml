@@ -1,0 +1,22 @@
+# Environment used for all analyses (tested versions; Python 3.10.18 on Linux)
+name: palo_verde_fallow
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy=2.2.6
+  - pandas=2.3.2
+  - scipy=1.15.2
+  - scikit-learn=1.7.2
+  - rasterio=1.4.3
+  - geopandas=1.1.1
+  - shapely=2.1.2
+  - pyproj=3.7.1
+  - matplotlib=3.10.6
+  - joblib=1.5.2
+  - pillow=11.3.0
+  - openpyxl
+  - pip
+  - pip:
+      - pystac-client==0.9.0
+      - planetary-computer==1.0.0

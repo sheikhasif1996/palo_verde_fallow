@@ -1,0 +1,15 @@
+{
+  "frozen_on": "2026-11-09",
+  "model": "RandomForestClassifier(n_estimators=500, min_samples_leaf=2, class_weight='balanced_subsample', random_state=7)",
+  "features": ["ndvi_mean","ndvi_max","ndvi_min","ndvi_std","bare_frac","ndmi_mean","ndmi_max","str_mean","str_max","b11_mean","b12_mean"],
+  "window_days_before": 90,
+  "window_days_after": 180,
+  "min_valid_obs": {"s2": 6, "s1": 4},
+  "training_labels": "2021 PVID snapshots (1 Jan, 31 Dec): fallow if >=70% of field on map; not fallow if <=5% on map and DWR 2021 cropped",
+  "monthly_state": "first of each month, Oct-Sep water year",
+  "intensity": "share of months predicted fallow, minimum 8 valid months",
+  "annual_fallow": "intensity >= 0.5",
+  "reference_for_test": "DWR 2023: idle if >=70% of field is class I or X; cropped if >=70% is P,F,T,G,C,D,YP; others unscored",
+  "spatial_holdout": "5 folds of 3 km blocks, seed 7; each field predicted by a model that excluded its block",
+  "untouched_test_year": 2023
+}

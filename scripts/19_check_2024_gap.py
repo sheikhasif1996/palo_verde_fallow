@@ -1,5 +1,5 @@
 """Why is the 2024 map 11.5% below PVID net fallow? Diagnostic only; the frozen method is not changed.
-usage: 19_check_2024_gap.py FIELDS PARTS MANIFEST DWR_BASE OUTPUTS"""
+usage: 19_check_2024_gap.py FIELDS PARTS MANIFEST DWR_BASE OUTPUTS AOI_SHP"""
 import sys, os, glob, warnings
 sys.path.insert(0, os.path.dirname(os.path.abspath(sys.argv[0])))
 import numpy as np, pandas as pd, geopandas as gpd
@@ -13,7 +13,7 @@ g=gpd.read_file(fg); g=g[g.label!='non_crop'].set_index('field_id')
 I=pd.read_csv(f'{out}/maps/field_year.csv.gz'); M=pd.read_csv(f'{out}/maps/monthly_state.csv.gz',parse_dates=['date']); M['area_ac']=M.field_id.map(g.area_ac)
 x0,y0,x1,y1=g.total_bounds; res=10; W=int((x1-x0)/res)+2; H=int((y1-y0)/res)+2; T=from_origin(x0-res,y1+res,res,res)
 ids=rasterize(zip(g.geometry,g.index),(H,W),transform=T,dtype='int32'); N=int(ids.max())+1; n=np.bincount(ids.ravel(),minlength=N).astype(float)
-aoi=gpd.read_file(os.path.expanduser('~/Downloads/object_detection/fallow_map_2021_palo_verde/Palo_verde_full_AOI.shp')).to_crs(32611).geometry.iloc[0].buffer(0)
+aoi=gpd.read_file(sys.argv[6]).to_crs(32611).geometry.iloc[0].buffer(0)
 print('--- A. DWR by year: idle area in mapped fields, and outside them within the AOI')
 rows=[]
 for y in range(2018,2025):
