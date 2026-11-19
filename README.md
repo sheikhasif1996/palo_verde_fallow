@@ -33,7 +33,7 @@ Input data are not included in this repository.
 | Cropland Data Layer | USDA NASS |
 | Soils (SSURGO), hydrography (NHD), elevation (3DEP) | USDA NRCS, USGS |
 
-The digitized PVID fallow maps, the field-level fallow maps and the reference-sample labels are archived separately (see the Data availability statement of the paper).
+The digitized PVID fallow maps, the field-level fallow maps and the reference-sample labels are archived on Zenodo: https://doi.org/10.5281/zenodo.24380928 (CC BY 4.0).
 
 ## Scripts
 
