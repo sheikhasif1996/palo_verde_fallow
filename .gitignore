@@ -19,3 +19,4 @@ scripts/35_patch_supplement.py
 scripts/36_patch_esin_framing.py
 scripts/37_patch_slop_audit.py
 scripts/38_patch_code_doi.py
+scripts/40_patch_data_doi.py
