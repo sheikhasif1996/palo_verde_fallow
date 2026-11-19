@@ -60,4 +60,4 @@ If you use this code, please cite the paper (citation to be added on publication
 
 ## License
 
-To be added.
+MIT; see [LICENSE](LICENSE).

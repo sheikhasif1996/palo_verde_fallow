@@ -1,0 +1,8 @@
+{
+  "title": "palo_verde_fallow: code for field-level mapping of rotational land fallowing in the Palo Verde Irrigation District from Sentinel-2 time series",
+  "upload_type": "software",
+  "description": "Analysis code for a reproducible workflow that maps rotational land fallowing for 2,548 fields in the Palo Verde Irrigation District, California, from Sentinel-2 time series for water years 2018 to 2024. Imagery is queried through the Microsoft Planetary Computer STAC API; a Random Forest trained on digitized 2021 PVID fallowing maps produces monthly fallow states and annual maps, which are validated with spatially blocked cross-validation, a held-out year, PVID 2023 verification maps and a blind stratified reference sample. Includes the frozen method settings and the conda environment file. Input data are not included.",
+  "creators": [{"name": "Asif, Sk Muhammad"}],
+  "license": "MIT",
+  "keywords": ["land fallowing", "Sentinel-2", "Random Forest", "spatial cross-validation", "STAC", "Palo Verde Irrigation District", "reproducible workflow"]
+}

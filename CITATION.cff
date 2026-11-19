@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+type: software
+title: "palo_verde_fallow: code for field-level mapping of rotational land fallowing in the Palo Verde Irrigation District"
+authors:
+  - family-names: Asif
+    given-names: Sk Muhammad
+license: MIT
+repository-code: "https://github.com/sheikhasif1996/palo_verde_fallow"
+version: 1.0.0
