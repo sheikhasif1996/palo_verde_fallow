@@ -1,5 +1,7 @@
 # palo_verde_fallow
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24380706.svg)](https://doi.org/10.5281/zenodo.24380706)
+
 Analysis code for field-level mapping of rotational land fallowing in the Palo Verde Irrigation District (PVID), California, from Sentinel-2 time series, water years 2018 to 2024.
 
 The workflow queries imagery through the Microsoft Planetary Computer STAC API, builds per-field time series for 2,548 fields from the California Department of Water Resources (DWR) 2021 crop map, trains a Random Forest on digitized 2021 PVID fallowing maps, and produces monthly fallow states and annual fallow maps. The maps are validated with spatially blocked cross-validation, a held-out year (2023), PVID's 2023 verification maps and a blind stratified reference sample, and are then used for spatiotemporal, driver and next-year prediction analyses.
@@ -56,7 +58,7 @@ Every script takes its input and output paths as command-line arguments; run a s
 
 ## Citation
 
-If you use this code, please cite the paper (citation to be added on publication).
+If you use this code, please cite the Zenodo archive (https://doi.org/10.5281/zenodo.24380706) and the paper (citation to be added on publication).
 
 ## License
 
