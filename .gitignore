@@ -1,0 +1,20 @@
+# Code only: no manuscript, documents, data or outputs
+manuscript/
+data/
+outputs/
+*.pdf
+*.docx
+*.doc
+*.md
+!README.md
+__pycache__/
+*.pyc
+# manuscript text builders and patches
+scripts/26_build_manuscript.py
+scripts/31_build_manuscript_v2.py
+scripts/31_patch_v2_*.py
+scripts/34_build_manuscript_v3.py
+scripts/34_patch_v3.py
+scripts/35_patch_supplement.py
+scripts/36_patch_esin_framing.py
+scripts/37_patch_slop_audit.py
